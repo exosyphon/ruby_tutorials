@@ -3,44 +3,46 @@ if true == false
 end
 
 if true == true
-    puts "got here!"
+    puts "got here"
 end
 
-if true == false 
-    puts "did not get in if"
-elsif true == true
-    puts "got in elsif"
+puts "##################"
+
+if true == false
+    puts "did not get here"
+elsif true == false
+    puts "did get here elsif"
+else
+    puts "got else"
 end
 
-puts "###########################"
+puts "##################"
 
-input = "match"
-
+input = "different match"
 case input
 when "match"
-    puts "got a match!"
+    puts "we got a match"
 when "different match"
-    puts "got a different match"
+    puts "we got a different match"
 else
-    puts "got an else"
+    puts "got base case"
 end
 
-puts "###########################"
-puts "Regex"
+puts "##################"
+puts "regex match"
 
-regex_input = "match"
+input = "match"
 case input
-when /^ma/
-    puts "got a regex match!"
+when /^mat/
+    puts "we got a regex match"
 else
-    puts "got an else"
+    puts "got base case"
 end
 
-puts "###########################"
-
+puts "##################"
 states = {
     "TX" => "Texas",
-    "NM" => "New Mexico"
+    "NM" => "New Mexico",
 }
 
 puts states["TX"]

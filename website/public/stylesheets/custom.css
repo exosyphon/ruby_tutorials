@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    position: fixed;
+    height: 65px;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-full-height {
+    min-height: calc(100vh - (160px));
+}
+
+.card {
+    background-color: white;
+    width: 90vw;
+}
+  

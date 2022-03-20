@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="card mx-auto mt-5 shadow-sm bg-white rounded">
+    <div class="card-body">
+      <h3>Todo List</h3>
+      <ul class="pl-0">
+        <% @todos.each do |todo| %>
+          <li class="list-group-item d-flex justify-content-between my-2">
+            <%= todo.content %>
+          </li>  
+        <% end %>
+      </ul>
+    </div>
+  </div>  
+</div>

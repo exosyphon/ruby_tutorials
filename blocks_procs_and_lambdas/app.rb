@@ -1,4 +1,4 @@
-!#/bin/ruby
+#!/usr/bin/ruby
 
 # Blocks, Procs, Lambdas are all closures
 # snippets of code that can be created to execute later
@@ -9,18 +9,18 @@ def my_method(items)
   while i < items.size
     yield(items[i])
     i += 1
-  end 
+  end
 end
 
-items = [1,2,3,4,5]
+items = [1, 2, 3, 4, 5]
 
 # multiline
-#my_method(items) do |n|
-  #puts "Item: #{n}"
-#end
+my_method(items) do |n|
+  puts "Item: #{n}"
+end
 
 # single line
-#my_method(items) { |n| puts "Item: #{n}!" }
+# my_method(items) { |n| puts "Item: #{n}!" }
 
 # Implicit vs explicit
 def my_method_explicit(items, &block)
@@ -28,7 +28,7 @@ def my_method_explicit(items, &block)
   while i < items.size
     block.call(items[i])
     i += 1
-  end 
+  end
 end
 #my_method_explicit(items) { |n| puts "Item: #{n}!" }
 
@@ -42,7 +42,7 @@ proc = Proc.new { |n| puts "procify!: #{n}" }
 
 # Explicit Proc
 def some_method_with_proc(&proc)
-  proc.call("Success")
+  proc.call('Success')
 end
 #some_method_with_proc { |n| puts "proc_with_explicit #{n}" }
 
@@ -74,8 +74,8 @@ my_func = ->(item) { puts item * 2 }
 
 # With maps
 configs = {
- config_1: ->(item) { puts item * 2 }, 
- config_2: ->(item) { puts item * 4 }, 
+ config_1: ->(item) { puts item * 2 },
+ config_2: ->(item) { puts item * 4 },
 }
 
 #configs[:config_1].call(10)
